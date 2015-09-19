@@ -84,7 +84,7 @@ var Inputter = {
 								'</tr>',
 								'<tr>',
 								'<td style="border:1px solid #222;padding: 5px 10px">4</td>',
-								'<td style="border:1px solid #222;padding: 5px 10px">+</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px;background-color:#ddd"></td>',
 								'<td style="border:1px solid #222;padding: 5px 10px">0</td>',
 								'</tr>',
 								'<td style="border:1px solid #222;padding: 5px 10px">3</td>',
