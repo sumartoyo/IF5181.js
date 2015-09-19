@@ -73,9 +73,32 @@ var Inputter = {
 							var codes = chainer.getCode();
 							Elementer.remove('logChaincode');
 							
+							var legend = Elementer.create('div');
+							legend.innerHTML = [
+								'<p style="float:left"><b>Nomor Arah</b></p>',
+								'<table style="border-collapse:collapse;float:left;margin:15px 10px">',
+								'<tr>',
+								'<td style="border:1px solid #222;padding: 5px 10px">5</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">6</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">7</td>',
+								'</tr>',
+								'<tr>',
+								'<td style="border:1px solid #222;padding: 5px 10px">4</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">+</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">0</td>',
+								'</tr>',
+								'<td style="border:1px solid #222;padding: 5px 10px">3</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">2</td>',
+								'<td style="border:1px solid #222;padding: 5px 10px">1</td>',
+								'</tr>',
+								'</table>',
+								'<div style="clear:both"></div>',
+							].join('');
+							chaincode.appendChild(legend);
+							
 							for (i = 0; i < codes.length; i++) {
 								var code = Elementer.create('p');
-								code.textContent = codes[i].code;
+								code.innerHTML = '<b>Objek ' + (i + 1) + '</b><br>' + codes[i].code;
 								code.style.wordWrap = 'break-word';
 								chaincode.appendChild(code);
 							}
